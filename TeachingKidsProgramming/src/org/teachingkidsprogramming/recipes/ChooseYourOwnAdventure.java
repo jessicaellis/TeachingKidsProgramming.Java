@@ -12,24 +12,47 @@ public class ChooseYourOwnAdventure
 {
   public static void main(String[] args)
   {
+    //  startStory (recipe below) --#1
+    //   ------------- Recipe for startStory --#1
     startStory();
+    //  ------------- End of startStory recipe --#1
   }
+  //  startStory (recipe below) --#1
+  //   ------------- Recipe for startStory --#1
+  //  ------------- End of startStory recipe --#1
   private static void startStory()
   {
+    //Tell the user "One morning the Tortoise woke up in a dream."
     MessageBox.showMessage("One morning the Tortoise woke up in a dream.");
+    //  animateStartStory (recipe below) --#1
+    //   ------------- Recipe for animateStartStory --#1
     animateStartStory();
+    //  ------------- End of animateStartStory recipe --#1
+    //     Ask the user for their choice of action with the question "Do you want to 'wake up' or 'explore' the dream?"
     String action = MessageBox.askForTextInput("Do you want to 'wake up' or 'explore' the dream?");
+    //     If the action is "wake up" --#4
     if ("wake up".equalsIgnoreCase(action))
     {
+      //    wakeUp (recipe below) --#1
+      //   ------------- Recipe for wakeUp --#1
       wakeUp();
+      //      ------------- End of wakeUp recipe --#1
     }
+    //Otherwise, if the action is "explore" 
     else if ("explore".equalsIgnoreCase(action))
     {
+      //    approachOoze (recipe below) --#1
+      //   ------------- Recipe for approachOoze --#1
       approachOoze();
+      //      ------------- End of approachOoze recipe --#1
     }
+    //Otherwise, if the answer is anything else
     else
     {
+      //    badAnswer (recipe below) --#1
+      //   ------------- Recipe for badAnswer --#1
       badAnswer();
+      //      ------------- End of badAnswer recipe --#1
     }
   }
   private static void badAnswer()
