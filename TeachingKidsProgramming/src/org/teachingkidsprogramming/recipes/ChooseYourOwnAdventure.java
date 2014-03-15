@@ -100,47 +100,77 @@ public class ChooseYourOwnAdventure
   }
   private static void pourIntoBackyard()
   {
+    //Tell the user "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water."
     MessageBox
         .showMessage("As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water.");
+    //Ask the user "As the man starts to prepare you as soup, do you...  'Scream' or 'Faint'?"
     String action = MessageBox
-        .askForTextInput("As the man starts to prepare you as soup, do you...  'Scream' or 'Faint'");
+        .askForTextInput("As the man starts to prepare you as soup, do you...  'Scream' or 'Faint'?");
+    //  If they answer "faint" --#4
     if ("faint".equalsIgnoreCase(action))
     {
+      //  tortoiseSoup (recipe below) --#1
+      //   ------------- Recipe for tortoiseSoup --#1
       tortoiseSoup();
+      //  ------------- End of tortoiseSoup recipe --#1
     }
+    //  Otherwise, if they answer "scream" --#4
     else if ("scream".equalsIgnoreCase(action))
     {
+      //  startStory (recipe below) --#1
+      //   ------------- Recipe for startStory --#1
       startStory();
+      //  ------------- End of startStory recipe --#1
     }
+    //Otherwise, if they answer anything else
     else
     {
+      //  badAnswer (recipe below) --#1
+      //   ------------- Recipe for badAnswer --#1
       badAnswer();
+      //  ------------- End of badAnswer recipe --#1
     }
   }
   private static void tortoiseSoup()
   {
+    //Tell the user "You made a delicious soup!  Yum!  The End."
     MessageBox.showMessage("You made a delicious soup!  Yum!  The End.");
   }
   private static void pourIntoToilet()
   {
+    //Tell the user "As you pour the ooze into the toilet it backs up, gurgles and explodes covering you in radio-active waste."
     MessageBox
-        .showMessage("As you pour the ooze into the toilet it backs up, gurgles and explodes covering you in radioactive waste.");
-    String pourTo = MessageBox.askForTextInput("Do you want to train to be a NINJA?  'Yes' or 'HECK YES'");
+        .showMessage("As you pour the ooze into the toilet it backs up, gurgles and explodes covering you in radio-active waste.");
+    //Ask the user "Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?"
+    String pourTo = MessageBox.askForTextInput("Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?");
+    //  If they answer "yes" --#4
     if ("yes".equalsIgnoreCase(pourTo))
     {
+      //  ninjaTortoise (recipe below) --#1
+      //   ------------- Recipe for ninjaTortoise --#1
       ninjaTortoise();
+      //  ------------- End of ninjaTortoise recipe --#1
     }
+    //  Otherwise, if they answer "heck yes" --#4
     else if ("heck yes".equalsIgnoreCase(pourTo))
     {
+      //  ninjaTortoise (recipe below) --#1
+      //   ------------- Recipe for ninjaTortoise --#1
       ninjaTortoise();
+      //  ------------- End of ninjaTortoise recipe --#1
     }
+    //Otherwise, if they answer anything else
     else
     {
+      //  badAnswer (recipe below) --#1
+      //   ------------- Recipe for badAnswer --#1
       badAnswer();
+      //  ------------- End of badAnswer recipe --#1
     }
   }
   private static void ninjaTortoise()
   {
+    //Tell the user "Awesome Dude!  You live out the rest of your life fighting crimes and eating pizza!"
     MessageBox.showMessage("Awesome Dude!  You live out the rest of your life fighting crimes and eating pizza!");
   }
   private static void animateStartStory()
