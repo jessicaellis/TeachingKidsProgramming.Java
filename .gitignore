@@ -7,3 +7,5 @@ bin
 # Package Files #
 *.war
 *.ear
+
+~*.docx
