@@ -28,9 +28,9 @@ public class ChooseYourOwnAdventure
     //   ------------- Recipe for animateStartStory --#1
     animateStartStory();
     //  ------------- End of animateStartStory recipe --#1
-    //     Ask the user for their choice of action with the question "Do you want to 'wake up' or 'explore' the dream?"
+    //     Ask the user "Do you want to 'wake up' or 'explore' the dream?"
     String action = MessageBox.askForTextInput("Do you want to 'wake up' or 'explore' the dream?");
-    //     If the action is "wake up" --#4
+    //     If they answer "wake up" --#4
     if ("wake up".equalsIgnoreCase(action))
     {
       //    wakeUp (recipe below) --#1
@@ -38,7 +38,7 @@ public class ChooseYourOwnAdventure
       wakeUp();
       //      ------------- End of wakeUp recipe --#1
     }
-    //Otherwise, if the action is "explore" 
+    //Otherwise, if they answer "explore" 
     else if ("explore".equalsIgnoreCase(action))
     {
       //    approachOoze (recipe below) --#1
@@ -46,7 +46,7 @@ public class ChooseYourOwnAdventure
       approachOoze();
       //      ------------- End of approachOoze recipe --#1
     }
-    //Otherwise, if the answer is anything else
+    //Otherwise, if they answer anything else
     else
     {
       //    badAnswer (recipe below) --#1
@@ -57,27 +57,45 @@ public class ChooseYourOwnAdventure
   }
   private static void badAnswer()
   {
+    //Tell the user "You don't know how to read directions.  You can't play this game.  The End."
     MessageBox.showMessage("You don't know how to read directions.  You can't play this game.  The End.");
   }
   private static void wakeUp()
   {
+    //Tell the user "You Wake up and have a boring day.  The End."
     MessageBox.showMessage("You Wake up and have a boring day.  The End.");
   }
   private static void approachOoze()
   {
-    String pourTo = MessageBox
-        .askForTextInput("You approach a glowing, green bucket of ooze, worried that you will get in trouble, you pick up the bucket.  Do you want to pour it in the 'backyard' or 'toilet'?");
+    //Tell the user "You approach a glowing, green bucket of ooze, worried that you will get in trouble, you pick up the bucket."
+    MessageBox
+        .showMessage("You approach a glowing, green bucket of ooze, worried that you will get in trouble, you pick up the bucket.");
+    //
+    //     Ask the user "Do you want to pour the ooze into the 'backyard' or 'toilet'?"
+    String pourTo = MessageBox.askForTextInput(" Do you want to pour the ooze into the 'backyard' or 'toilet'?");
+    //  If they answer "toilet" --#4
     if ("toilet".equalsIgnoreCase(pourTo))
     {
+      //    pourIntoToilet (recipe below) --#1
+      //   ------------- Recipe for pourIntoToilet --#1
       pourIntoToilet();
+      //  ------------- End of pourIntoToilet recipe --#1
     }
+    //  Otherwise, if they answer "backyard" --#4
     else if ("backyard".equalsIgnoreCase(pourTo))
     {
+      //    pourIntoBackyard (recipe below) --#1
+      //   ------------- Recipe for pourIntoBackyard --#1
       pourIntoBackyard();
+      //  ------------- End of pourIntoBackyard recipe --#1
     }
+    //Otherwise, if they answer anything else
     else
     {
+      //    badAnswer (recipe below) --#1
+      //   ------------- Recipe for badAnswer --#1
       badAnswer();
+      //  ------------- End of badAnswer recipe --#1
     }
   }
   private static void pourIntoBackyard()
